@@ -2,10 +2,10 @@
 <head>
     <title>Game Controller</title>
     <script>
-        let sessionId = new URLSearchParams(window.location.search).get("session");
+        let ws = new WebSocket("ws://82.37.14.226:8080");
 
         function sendInput(action) {
-            fetch(`https://yourserver.com/api/sendInput?session=${sessionId}&input=${action}`);
+            ws.send(action);
         }
     </script>
 
