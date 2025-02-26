@@ -8,10 +8,44 @@
             fetch(`https://yourserver.com/api/sendInput?session=${sessionId}&input=${action}`);
         }
     </script>
+
+    <style>
+        .button {
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button1 {
+            font-size: 10px;
+        }
+
+        .button2 {
+            font-size: 12px;
+        }
+
+        .button3 {
+            font-size: 16px;
+        }
+
+        .button4 {
+            font-size: 20px;
+        }
+
+        .button5 {
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
-    <button style="height:200px;width:200px" onclick="sendInput('left')">Left</button>
-    <button style="height:200px;width:200px"onclick="sendInput('right')">Right</button>
-    <button style="height:200px;width:200px" onclick="sendInput('jump')">Jump</button>
+    <button class="button button1" onclick="sendInput('left')">Left</button>
+    <button class="button button1" onclick="sendInput('right')">Right</button>
+    <button class="button button1" onclick="sendInput('jump')">Jump</button>
 </body>
 </html>
