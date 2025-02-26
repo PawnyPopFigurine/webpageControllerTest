@@ -2,9 +2,22 @@
 <head>
     <title>Game Controller</title>
     <script>
-        let ws = new WebSocket("ws://82.37.14.226:8080");
+        let ws = new WebSocket("ws://localhost:8080");
+
+        ws.onopen = function () {
+            console.log("Connected to WebSocket Server!");
+        };
+
+        ws.onerror = function (error) {
+            console.error("WebSocket Error:", error);
+        };
+
+        ws.onmessage = function (event) {
+            console.log("Message from Server:", event.data);
+        };
 
         function sendInput(action) {
+            console.log("Sending:", action);
             ws.send(action);
         }
     </script>
