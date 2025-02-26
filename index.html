@@ -1,18 +1,1 @@
-<html>
-<head>
-    <title>Game Controller</title>
-    <script>
-        let sessionId = new URLSearchParams(window.location.search).get("session");
-
-        function sendInput(action) {
-            fetch(`https://yourserver.com/api/sendInput?session=${sessionId}&input=${action}`);
-        }
-    </script>
-</head>
-<body>
-    <h1>Game Controller</h1>
-    <button onclick="sendInput('left')">Left</button>
-    <button onclick="sendInput('right')">Right</button>
-    <button onclick="sendInput('jump')">Jump</button>
-</body>
-</html>
+<h1>HELLO!</h1>
